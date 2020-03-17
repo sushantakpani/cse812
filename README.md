@@ -1,1 +1,1 @@
-# CSE 812 Project Github
+# CSE 812 Project
