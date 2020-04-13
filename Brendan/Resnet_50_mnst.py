@@ -51,20 +51,20 @@ def test( model, device, test_loader):
 
 ### CRedit for synthetic mnist data set from: 
 ### https://github.com/shubham0204/Synthetic_MNIST_Classification
-tainImages_x = np.load("./data/x.npy")
-tainImages_y = np.load("./data/y.npy")
+# tainImages_x = np.load("./data/x.npy")
+# tainImages_y = np.load("./data/y.npy")
 
-test_x = np.load("./data/test_x.npy")
-test_y = np.load("./data/test_x.npy")
+# test_x = np.load("./data/test_x.npy")
+# test_y = np.load("./data/test_x.npy")
 
 #constant hyper params taken from sushan
 seed = 98528
-batch_size = 64
+batch_size = 1000
 test_batch_size = 1000
 lr =0.01
 momentum = 0.5
 epochs = 10
-num_processes = 2
+num_processes = 4
 save_model = False
 log_interval = 10
 
@@ -79,7 +79,7 @@ def main():
     #])
     
     #proccessing from sushan
-    use_cuda = not False and torch.cuda.is_available()
+    use_cuda = not True and torch.cuda.is_available()
     
     torch.manual_seed(seed)
     
@@ -90,16 +90,14 @@ def main():
     train_loader = torch.utils.data.DataLoader(
         datasets.MNIST('../TempData/data', train=True, download=True,
                        transform=transforms.Compose([
-                           transforms.Grayscale(num_output_channels=3),
-                           transforms.Resize((224,224)),
+                           transforms.Grayscale(num_output_channels=1),
                            transforms.ToTensor(),
                            transforms.Normalize((0.1307,), (0.3081,))
                        ])),
         batch_size=batch_size, shuffle=True, **kwargs)
     test_loader = torch.utils.data.DataLoader(
         datasets.MNIST('../TempData/data', train=False, transform=transforms.Compose([
-            transforms.Grayscale(num_output_channels=3),
-            transforms.Resize((224,224)),
+            transforms.Grayscale(num_output_channels=1),
             transforms.ToTensor(),
             transforms.Normalize((0.1307,), (0.3081,))
         ])),
@@ -113,10 +111,15 @@ def main():
     #input_batch = input_tensor.unsqueeze(0)
     
     #inport model
-    model = torch.hub.load('pytorch/vision:v0.5.0', 'resnet50', pretrained=True).to(device)
+    model = torch.hub.load('pytorch/vision:v0.5.0', 'resnet50', pretrained=False).to(device)
     #update length of output
     num_model_features = model.fc.in_features
     model.fc = torch.nn.Linear(num_model_features,10)
+    
+    ## Code used to reduce Resnet input sample from https://discuss.pytorch.org/t/transfer-learning-usage-with-different-input-size/20744/3
+    first_conv_layer = torch.nn.Conv2d(1, 64, kernel_size=(5,5), stride=(2, 2), padding=(3, 3), bias=False)
+    model.conv1 = first_conv_layer
+    
     
     model.share_memory()  #Multi-processing step
     optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)
