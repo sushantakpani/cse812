@@ -24,10 +24,10 @@ def train(log_interval, model, device, train_loader, optimizer, epoch):
         loss = F.nll_loss(output, target)
         loss.backward()
         optimizer.step()
-        if batch_idx % log_interval == 0:
-            print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
-                epoch, batch_idx * len(data), len(train_loader.dataset),
-                       100. * batch_idx / len(train_loader), loss.item()))
+        # if batch_idx % log_interval == 0:
+        #     print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+        #         epoch, batch_idx * len(data), len(train_loader.dataset),
+        #                100. * batch_idx / len(train_loader), loss.item()))
 
 
 def test( model, device, test_loader):
@@ -47,7 +47,7 @@ def test( model, device, test_loader):
     print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
-
+    return test_loss,100. * correct / len(test_loader.dataset)
 
 ### CRedit for synthetic mnist data set from: 
 ### https://github.com/shubham0204/Synthetic_MNIST_Classification
@@ -59,16 +59,16 @@ def test( model, device, test_loader):
 
 #constant hyper params taken from sushan
 seed = 98528
-batch_size = 1000
+#batch_size = 1000
 test_batch_size = 1000
 lr =0.01
 momentum = 0.5
 epochs = 10
-num_processes = 4
+num_processes = 1
 save_model = False
-log_interval = 10
+log_interval = 1
 
-def main():
+def main(batch_size):
     ## This guide was used as a baisis for preparing the transfer learning:
     ## https://missinglink.ai/guides/pytorch/pytorch-resnet-building-training-scaling-residual-networks-pytorch/
     #preprocess = transforms.Compose([
@@ -79,11 +79,11 @@ def main():
     #])
     
     #proccessing from sushan
-    use_cuda = not True and torch.cuda.is_available()
+    use_cuda = not False and torch.cuda.is_available()
     
     torch.manual_seed(seed)
     
-    device = torch.device("cuda" if use_cuda else "cpu")
+    device = torch.device("cuda:0" if use_cuda else "cpu")
     
     
     kwargs = {'num_workers': 1, 'pin_memory': True} if use_cuda else {}
@@ -111,43 +111,49 @@ def main():
     #input_batch = input_tensor.unsqueeze(0)
     
     #inport model
-    model = torch.hub.load('pytorch/vision:v0.5.0', 'resnet50', pretrained=False).to(device)
+    model = torch.hub.load('pytorch/vision:v0.5.0', 'resnet18', pretrained=False).to(device)
     #update length of output
     num_model_features = model.fc.in_features
     model.fc = torch.nn.Linear(num_model_features,10)
     
+    
     ## Code used to reduce Resnet input sample from https://discuss.pytorch.org/t/transfer-learning-usage-with-different-input-size/20744/3
-    first_conv_layer = torch.nn.Conv2d(1, 64, kernel_size=(5,5), stride=(2, 2), padding=(3, 3), bias=False)
+    first_conv_layer = torch.nn.Conv2d(1, 64, kernel_size=(3,3), stride=(2, 2), padding=(3, 3), bias=False)
     model.conv1 = first_conv_layer
     
-    
+    model.to(device)
     model.share_memory()  #Multi-processing step
     optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)
     
     # train via transfer learning
     t = time.time()
+  
     for epoch in range(1, epochs + 1):
       # For using multi-processing
-       processes = []
-       for rank in range(num_processes):
-         p = mp.Process(target=train, args=(log_interval, model, device, train_loader, optimizer, epoch))
-         p.start()
-         processes.append(p)
-       if bool(epoch%2) == False:
-           for p in processes:
-             p.join()
+        processes = []
+        for rank in range(num_processes):
+          p = mp.Process(target=train, args=(log_interval, model, device, train_loader, optimizer, epoch))
+          p.start()
+          processes.append(p)
+        for p in processes:
+           p.join()
     
       # For not using multi-processing
-       #train(args, model, device, train_loader, optimizer, epoch)
-       test(model, device, test_loader)
-    
-    print('Total Time taken in training and validation: '+ str(time.time() - t))
+       #train(log_interval, model, device, train_loader, optimizer, epoch)
+        endTest = test(model, device, test_loader)
+    timeTaken = str(time.time() - t)
+    print('Total Time taken in training and validation: '+ timeTaken)
     
     if (save_model):
         torch.save(model.state_dict(), "mnist_resnet.pt")
+    return timeTaken,endTest
 
 if __name__ == '__main__':
-    main()
+    resultList = []
+    for bSize in [32,64,128,256,512,1024,2048,4096,8192]:
+        resultList.append(main(bSize))
+    print(resultList)
+    #main()
 
 
 
