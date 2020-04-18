@@ -67,6 +67,7 @@ epochs = 10
 num_processes = 1
 save_model = False
 log_interval = 1
+useCPU =True
 
 def main(batch_size):
     ## This guide was used as a baisis for preparing the transfer learning:
@@ -79,7 +80,7 @@ def main(batch_size):
     #])
     
     #proccessing from sushan
-    use_cuda = not False and torch.cuda.is_available()
+    use_cuda = not useCPU and torch.cuda.is_available()
     
     torch.manual_seed(seed)
     
