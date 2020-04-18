@@ -67,7 +67,7 @@ epochs = 10
 num_processes = 1
 save_model = False
 log_interval = 1
-useCPU =True
+useCPU =False
 
 def main(batch_size):
     ## This guide was used as a baisis for preparing the transfer learning:
@@ -131,16 +131,16 @@ def main(batch_size):
   
     for epoch in range(1, epochs + 1):
       # For using multi-processing
-        processes = []
-        for rank in range(num_processes):
-          p = mp.Process(target=train, args=(log_interval, model, device, train_loader, optimizer, epoch))
-          p.start()
-          processes.append(p)
-        for p in processes:
-           p.join()
+        # processes = []
+        # for rank in range(num_processes):
+        #   p = mp.Process(target=train, args=(log_interval, model, device, train_loader, optimizer, epoch))
+        #   p.start()
+        #   processes.append(p)
+        # for p in processes:
+        #    p.join()
     
       # For not using multi-processing
-       #train(log_interval, model, device, train_loader, optimizer, epoch)
+        train(log_interval, model, device, train_loader, optimizer, epoch)
         endTest = test(model, device, test_loader)
     timeTaken = str(time.time() - t)
     print('Total Time taken in training and validation: '+ timeTaken)
