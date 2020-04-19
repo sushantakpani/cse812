@@ -151,7 +151,7 @@ def main(batch_size):
 
 if __name__ == '__main__':
     resultList = []
-    for bSize in [32,64,128,256,512,1024,2048,4096,8192]:
+    for bSize in [128,256,512,1024,2048,4096,8192]:
         resultList.append(main(bSize))
     print(resultList)
     #main()

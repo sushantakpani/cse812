@@ -1,0 +1,226 @@
+Using cache found in /home/bdhand/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -2396577.8176, Accuracy: 4772/10000 (48%)
+
+
+Test set: Average loss: -53503027104.9728, Accuracy: 1940/10000 (19%)
+
+
+Test set: Average loss: -240045622530198.7188, Accuracy: 1135/10000 (11%)
+
+
+Test set: Average loss: -9197592362982795264.0000, Accuracy: 1135/10000 (11%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+Total Time taken in training and validation: 6387.456260442734
+Using cache found in /home/bdhand/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -15355.6040, Accuracy: 4175/10000 (42%)
+
+
+Test set: Average loss: -3842846.3616, Accuracy: 4404/10000 (44%)
+
+
+Test set: Average loss: -43710027.7760, Accuracy: 1843/10000 (18%)
+
+
+Test set: Average loss: -30465564711.3216, Accuracy: 3859/10000 (39%)
+
+
+Test set: Average loss: -15196563130495.7949, Accuracy: 2311/10000 (23%)
+
+
+Test set: Average loss: -6892602164454516.0000, Accuracy: 1135/10000 (11%)
+
+
+Test set: Average loss: -475317793008904448.0000, Accuracy: 1135/10000 (11%)
+
+
+Test set: Average loss: -56474354800170934272.0000, Accuracy: 1135/10000 (11%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+Total Time taken in training and validation: 5841.203815937042
+Using cache found in /home/bdhand/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -17061.5589, Accuracy: 3256/10000 (33%)
+
+
+Test set: Average loss: -60873.8052, Accuracy: 4391/10000 (44%)
+
+
+Test set: Average loss: -46618.9700, Accuracy: 3061/10000 (31%)
+
+
+Test set: Average loss: -1539037.2096, Accuracy: 3998/10000 (40%)
+
+
+Test set: Average loss: -48393751.7568, Accuracy: 4323/10000 (43%)
+
+
+Test set: Average loss: -273870820.1472, Accuracy: 3848/10000 (38%)
+
+
+Test set: Average loss: -926264957.3376, Accuracy: 1366/10000 (14%)
+
+
+
+Test set: Average loss: -56267968924.8768, Accuracy: 2107/10000 (21%)
+
+
+Test set: Average loss: -175386653831.9872, Accuracy: 1308/10000 (13%)
+
+
+Test set: Average loss: -5312915078905.8564, Accuracy: 1814/10000 (18%)
+
+Total Time taken in training and validation: 12263.78270483017
+Using cache found in /home/bdhand/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -385.5073, Accuracy: 7698/10000 (77%)
+
+
+Test set: Average loss: -2304.5720, Accuracy: 3412/10000 (34%)
+
+
+Test set: Average loss: -5554.9244, Accuracy: 7436/10000 (74%)
+
+
+Test set: Average loss: -2381.1834, Accuracy: 4007/10000 (40%)
+
+
+Test set: Average loss: -68085.1852, Accuracy: 6680/10000 (67%)
+
+
+Test set: Average loss: -314671.2192, Accuracy: 6257/10000 (63%)
+
+
+Test set: Average loss: -2174336.9472, Accuracy: 4457/10000 (45%)
+
+
+Test set: Average loss: -5642644.9920, Accuracy: 5762/10000 (58%)
+
+
+Test set: Average loss: -6591340.6464, Accuracy: 5216/10000 (52%)
+
+
+Test set: Average loss: -23729604.6080, Accuracy: 5584/10000 (56%)
+
+Total Time taken in training and validation: 5776.239776134491
+Using cache found in /home/bdhand/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -133.5853, Accuracy: 7342/10000 (73%)
+
+
+Test set: Average loss: -448.1721, Accuracy: 7293/10000 (73%)
+
+
+Test set: Average loss: -1831.9221, Accuracy: 5540/10000 (55%)
+
+
+Test set: Average loss: -247.8093, Accuracy: 3885/10000 (39%)
+
+
+Test set: Average loss: -2823.8637, Accuracy: 7336/10000 (73%)
+
+
+Test set: Average loss: -5306.2335, Accuracy: 7297/10000 (73%)
+
+
+Test set: Average loss: -201664.6624, Accuracy: 2091/10000 (21%)
+
+
+Test set: Average loss: -13280.5898, Accuracy: 6969/10000 (70%)
+
+
+Test set: Average loss: -30010.9324, Accuracy: 6931/10000 (69%)
+
+
+Test set: Average loss: -190041.9056, Accuracy: 5446/10000 (54%)
+
+Total Time taken in training and validation: 6135.547984361649
+Using cache found in /home/bdhand/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -16.0117, Accuracy: 6271/10000 (63%)
+
+
+Test set: Average loss: -132.5799, Accuracy: 7313/10000 (73%)
+
+
+Test set: Average loss: -256.3308, Accuracy: 7761/10000 (78%)
+
+
+Test set: Average loss: -454.6069, Accuracy: 7798/10000 (78%)
+
+
+Test set: Average loss: -579.9620, Accuracy: 7864/10000 (79%)
+
+
+Test set: Average loss: -609.4584, Accuracy: 7527/10000 (75%)
+
+
+Test set: Average loss: -1635.6045, Accuracy: 5498/10000 (55%)
+
+
+Test set: Average loss: -1412.0467, Accuracy: 7238/10000 (72%)
+
+
+Test set: Average loss: -2492.7712, Accuracy: 3114/10000 (31%)
+
+
+Test set: Average loss: -2683.0823, Accuracy: 7211/10000 (72%)
+
+Total Time taken in training and validation: 6282.53017950058
+Using cache found in /home/bdhand/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -2.2679, Accuracy: 4474/10000 (45%)
+
+
+Test set: Average loss: -20.2991, Accuracy: 6412/10000 (64%)
+
+
+Test set: Average loss: -75.9421, Accuracy: 7103/10000 (71%)
+
+
+Test set: Average loss: -152.4760, Accuracy: 7436/10000 (74%)
+
+
+Test set: Average loss: -232.9008, Accuracy: 7655/10000 (77%)
+
+
+Test set: Average loss: -317.3553, Accuracy: 7084/10000 (71%)
+
+
+Test set: Average loss: -386.2842, Accuracy: 7867/10000 (79%)
+
+
+Test set: Average loss: -434.5694, Accuracy: 7880/10000 (79%)
+
+
+Test set: Average loss: -117.3658, Accuracy: 425/10000 (4%)
+
+
+Test set: Average loss: -1582.3728, Accuracy: 6345/10000 (63%)
+
+Total Time taken in training and validation: 6404.092279911041
+[('6387.456260442734', (nan, 9.8)), ('5841.203815937042', (nan, 9.8)), ('12263.78270483017', (-5312915078905.856, 18.14)), ('5776.239776134491', (-23729604.608, 55.84)), ('6135.547984361649', (-190041.9056, 54.46)), ('6282.53017950058', (-2683.082275, 72.11)), ('6404.092279911041', (-1582.3727875, 63.45))]
