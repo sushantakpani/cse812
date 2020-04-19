@@ -1,0 +1,265 @@
+cpu
+Using cache found in /home/brendan/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -23459766101.6064, Accuracy: 1895/10000 (19%)
+
+
+Test set: Average loss: -11983016321870784512.0000, Accuracy: 1135/10000 (11%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+Total Time taken in training and validation: 4858.133536100388
+cpu
+Using cache found in /home/brendan/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -81894019.0720, Accuracy: 1135/10000 (11%)
+
+
+Test set: Average loss: -14035249738.5472, Accuracy: 2375/10000 (24%)
+
+
+Test set: Average loss: -678307971500448.1250, Accuracy: 2880/10000 (29%)
+
+
+Test set: Average loss: -69087007113635397632.0000, Accuracy: 1135/10000 (11%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+Total Time taken in training and validation: 3185.8917503356934
+cpu
+Using cache found in /home/brendan/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -17088.2467, Accuracy: 5734/10000 (57%)
+
+
+Test set: Average loss: -4774584.5760, Accuracy: 4762/10000 (48%)
+
+
+Test set: Average loss: -510035856.5888, Accuracy: 5288/10000 (53%)
+
+
+Test set: Average loss: -46153940022.0672, Accuracy: 3891/10000 (39%)
+
+
+Test set: Average loss: -2365011098232.4224, Accuracy: 2010/10000 (20%)
+
+
+Test set: Average loss: -1525808187551672.0000, Accuracy: 2810/10000 (28%)
+
+
+Test set: Average loss: -447049971822169472.0000, Accuracy: 1406/10000 (14%)
+
+
+Test set: Average loss: -27507981570019397632.0000, Accuracy: 1135/10000 (11%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+
+Test set: Average loss: nan, Accuracy: 980/10000 (10%)
+
+Total Time taken in training and validation: 2331.284552335739
+cpu
+Using cache found in /home/brendan/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -1160.0551, Accuracy: 5786/10000 (58%)
+
+
+Test set: Average loss: -9685.0938, Accuracy: 4888/10000 (49%)
+
+
+Test set: Average loss: -123826.7576, Accuracy: 4162/10000 (42%)
+
+
+Test set: Average loss: -2789188.7360, Accuracy: 5995/10000 (60%)
+
+
+Test set: Average loss: -39897753.6000, Accuracy: 4279/10000 (43%)
+
+
+Test set: Average loss: -358039286.5792, Accuracy: 2510/10000 (25%)
+
+
+Test set: Average loss: -5681560367.9232, Accuracy: 2867/10000 (29%)
+
+
+Test set: Average loss: -50861524490.6496, Accuracy: 3524/10000 (35%)
+
+
+Test set: Average loss: -176220634139.8528, Accuracy: 2541/10000 (25%)
+
+
+Test set: Average loss: -4247905567663.7183, Accuracy: 2289/10000 (23%)
+
+Total Time taken in training and validation: 1946.9432196617126
+cpu
+Using cache found in /home/brendan/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -400.6107, Accuracy: 7607/10000 (76%)
+
+
+Test set: Average loss: -1524.5586, Accuracy: 6806/10000 (68%)
+
+
+Test set: Average loss: -5132.1020, Accuracy: 6905/10000 (69%)
+
+
+Test set: Average loss: -16219.9737, Accuracy: 7006/10000 (70%)
+
+
+Test set: Average loss: -546234.4256, Accuracy: 4454/10000 (45%)
+
+
+Test set: Average loss: -138675.7936, Accuracy: 5942/10000 (59%)
+
+
+Test set: Average loss: -661421.8048, Accuracy: 5631/10000 (56%)
+
+
+Test set: Average loss: -421398704.9472, Accuracy: 1419/10000 (14%)
+
+
+Test set: Average loss: -11591937.7408, Accuracy: 5343/10000 (53%)
+
+
+Test set: Average loss: -233538063.5648, Accuracy: 1135/10000 (11%)
+
+Total Time taken in training and validation: 1699.6199781894684
+cpu
+Using cache found in /home/brendan/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -133.5969, Accuracy: 7355/10000 (74%)
+
+
+Test set: Average loss: -398.4639, Accuracy: 7676/10000 (77%)
+
+
+Test set: Average loss: -737.3641, Accuracy: 7879/10000 (79%)
+
+
+Test set: Average loss: -1460.1665, Accuracy: 7884/10000 (79%)
+
+
+Test set: Average loss: -2193.2231, Accuracy: 7460/10000 (75%)
+
+
+Test set: Average loss: -4069.0895, Accuracy: 4466/10000 (45%)
+
+
+Test set: Average loss: -7390.3058, Accuracy: 7539/10000 (75%)
+
+
+Test set: Average loss: -14358.8231, Accuracy: 6873/10000 (69%)
+
+
+Test set: Average loss: -36634.8896, Accuracy: 5585/10000 (56%)
+
+
+Test set: Average loss: -885189.3760, Accuracy: 3249/10000 (32%)
+
+Total Time taken in training and validation: 1894.8780539035797
+cpu
+Using cache found in /home/brendan/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -16.0450, Accuracy: 6269/10000 (63%)
+
+
+Test set: Average loss: -126.9001, Accuracy: 7295/10000 (73%)
+
+
+Test set: Average loss: -272.4332, Accuracy: 7326/10000 (73%)
+
+
+Test set: Average loss: -377.0724, Accuracy: 7846/10000 (78%)
+
+
+Test set: Average loss: -278.6751, Accuracy: 6960/10000 (70%)
+
+
+Test set: Average loss: -1183.4767, Accuracy: 7078/10000 (71%)
+
+
+Test set: Average loss: -891.2192, Accuracy: 5197/10000 (52%)
+
+
+Test set: Average loss: -1205.6803, Accuracy: 5764/10000 (58%)
+
+
+Test set: Average loss: -1787.8127, Accuracy: 6598/10000 (66%)
+
+
+Test set: Average loss: -2085.9103, Accuracy: 7809/10000 (78%)
+
+Total Time taken in training and validation: 2186.4769694805145
+cpu
+Using cache found in /home/brendan/.cache/torch/hub/pytorch_vision_v0.5.0
+
+Test set: Average loss: -2.2693, Accuracy: 4476/10000 (45%)
+
+
+Test set: Average loss: -18.1686, Accuracy: 6349/10000 (63%)
+
+
+Test set: Average loss: -67.4116, Accuracy: 6996/10000 (70%)
+
+
+Test set: Average loss: -132.4225, Accuracy: 7358/10000 (74%)
+
+
+Test set: Average loss: -185.5487, Accuracy: 7606/10000 (76%)
+
+
+Test set: Average loss: -243.9970, Accuracy: 7726/10000 (77%)
+
+
+Test set: Average loss: -356.7909, Accuracy: 6913/10000 (69%)
+
+
+Test set: Average loss: -400.7511, Accuracy: 7840/10000 (78%)
+
+
+Test set: Average loss: -420.7929, Accuracy: 7900/10000 (79%)
+
+
+Test set: Average loss: -513.9498, Accuracy: 5976/10000 (60%)
+
+Total Time taken in training and validation: 2305.1867690086365
+[('4858.133536100388', (nan, 9.8)), ('3185.8917503356934', (nan, 9.8)), ('2331.284552335739', (nan, 9.8)), ('1946.9432196617126', (-4247905567663.7183, 22.89)), ('1699.6199781894684', (-233538063.5648, 11.35)), ('1894.8780539035797', (-885189.376, 32.49)), ('2186.4769694805145', (-2085.910275, 78.09)), ('2305.1867690086365', (-513.949825, 59.76))]
