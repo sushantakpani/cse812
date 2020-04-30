@@ -60,6 +60,7 @@ def test( model, device, test_loader):
 #constant hyper params taken from sushan
 seed = 98528
 #batch_size = 1000
+batch_size_list = [480,500,512,520,530]
 test_batch_size = 1000
 lr =0.01
 momentum = 0.5
@@ -67,7 +68,7 @@ epochs = 10
 num_processes = 1
 save_model = False
 log_interval = 1
-useCPU =True
+useCPU =False
 
 def main(batch_size):
     ## This guide was used as a baisis for preparing the transfer learning:
@@ -152,7 +153,8 @@ def main(batch_size):
 
 if __name__ == '__main__':
     resultList = []
-    for bSize in [128,256,512,1024,2048,4096,8192]:
+    print(torch.cuda.is_available())
+    for bSize in batch_size_list:
         resultList.append(main(bSize))
     print(resultList)
     #main()
