@@ -1,3 +1,6 @@
+#Sushanta Kumar Pani
+#CSE812 MSU
+
 from __future__ import print_function
 import argparse
 import torch
@@ -9,7 +12,7 @@ from torchvision import datasets, transforms
 import torch.multiprocessing as mp
 import os
 
-
+#Give the desired cuda id to be used
 os.environ["CUDA_VISIBLE_DEVICES"]="1,3"
 
 
@@ -32,7 +35,7 @@ class Net(nn.Module):
         return F.log_softmax(x, dim=1)
 
 def main():
-    # Training settings
+    # Training settings and hyper parmaeter
     parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
     parser.add_argument('--batch-size', type=int, default=128, metavar='N',
                         help='input batch size for training (default: 64)')
@@ -54,7 +57,8 @@ def main():
                         help='For Saving the current Model')
     parser.add_argument('--num-processes', type=int, default=1, metavar='N',
                         help='how many training processes to use (default: 2)')
-
+    
+    #pass parameter to arguments
     args = parser.parse_args()
     
     use_cuda = not args.no_cuda and torch.cuda.is_available()
@@ -70,7 +74,7 @@ def main():
     
     
     train_loader = torch.utils.data.DataLoader(
-        datasets.MNIST('../TempData/data', train=True, download=True,
+        datasets.MNIST('../data', train=True, download=True,
                        transform=transforms.Compose([
                            transforms.ToTensor(),
                            transforms.Normalize((0.1307,), (0.3081,))
@@ -79,45 +83,27 @@ def main():
     
     
     test_loader = torch.utils.data.DataLoader(
-        datasets.MNIST('../TempData/data', train=False, transform=transforms.Compose([
+        datasets.MNIST('../data', train=False, transform=transforms.Compose([
             transforms.ToTensor(),
             transforms.Normalize((0.1307,), (0.3081,))
         ])),
         batch_size=args.test_batch_size, shuffle=True, **kwargs)
 
     
-    #model = Net().to(device)
-    #model=Net().cuda()
-    
-    
     model = Net()
     print("batch_size", args.batch_size, "learning rate ", args.lr)
     if (torch.cuda.device_count() > 0) and (device!=torch.device("cpu")):
         print("Let's use", torch.cuda.device_count(), "GPUs!")
-        # dim = 0 [30, xxx] -> [10, ...], [10, ...], [10, ...] on 3 GPUs
         model = nn.DataParallel(model)
 
     model.to(device)
     
-    #model = torch.nn.DataParallel(model, device_ids=None)
-    
-    #model.share_memory()  #Multi-processing step
     optimizer = optim.SGD(model.parameters(), lr=args.lr, momentum=args.momentum)
 
     t = time.time()
     for epoch in range(1, args.epochs + 1):
         print(epoch," epoch of total", args.epochs)
-      # For using multi-processing
-            #         processes = []
-            #         for rank in range(args.num_processes):
-            #             p = mp.Process(target=train, args=(args, model, device, train_loader, optimizer, epoch))
-            #             p.start()
-            #             processes.append(p)
-            #         if bool(epoch%2) == 'False':
-            #             for p in processes:
-            #                 p.join()
 
-      # For not using multi-processing
         train(args, model, device, train_loader, optimizer, epoch)
         test(args, model, device, test_loader)
 
@@ -162,6 +148,7 @@ def test(args, model, device, test_loader):
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
 
-    
+
+#Begin 
 if __name__ == '__main__':
     main()
